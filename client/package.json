@@ -1,0 +1,27 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-helmet": "^5.2.1",
+    "react-scripts": "0.9.5"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.6.3",
+    "npm-watch": "^0.6.0",
+    "react-hot-loader": "^4.12.15"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "watch": "node scripts/watch.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ]
+}
