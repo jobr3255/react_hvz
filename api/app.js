@@ -6,6 +6,7 @@ var logger = require('morgan');
 var cors = require("cors");
 
 var indexRouter = require('./routes/index');
+var eventsRouter = require('./routes/events');
 var usersRouter = require('./routes/users');
 var testAPIRouter = require("./routes/testAPI");
 
@@ -15,6 +16,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
@@ -23,6 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/api/events', eventsRouter);
 app.use('/users', usersRouter);
 app.use("/testAPI", testAPIRouter);
 

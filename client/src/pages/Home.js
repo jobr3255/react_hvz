@@ -1,21 +1,7 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
 
-export default class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { apiResponse: "" };
-  }
-
-  callAPI() {
-    fetch("http://localhost:9000/testAPI")
-      .then(res => res.text())
-      .then(res => this.setState({ apiResponse: res }));
-  }
-
-  componentWillMount() {
-    this.callAPI();
-  }
+export default class Home extends Component {  
   render() {
     return (
       <div className="App signup lightslide">
