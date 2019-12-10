@@ -6,6 +6,7 @@ import Routes from './Routes.js';
 
 export default class Navbar extends Component {
   render() {
+  // <li><a href="/about">About</a></li>
     return(
       <div>
         <Helmet>
@@ -15,11 +16,10 @@ export default class Navbar extends Component {
           <nav>
             <ul>
               <li><a href="/">Home</a></li>
-              <li><a href="/about">About</a></li>
               <li><a href="/rules">Rules</a></li>
               <li><a href="/events">Events</a></li>
-              <li><a style={{float: 'right'}} id='login_button' href='/login.php'>Login</a></li>
-              <li><a style={{float: 'right'}} id='signup_button' href='/signup.php'>Sign Up</a></li>
+              <li><a style={{float: 'right'}} id='login_button' href='/login'>Login</a></li>
+              <li><a style={{float: 'right'}} id='signup_button' href='/signup'>Sign Up</a></li>
             </ul>
           </nav>
           <Routes/>
