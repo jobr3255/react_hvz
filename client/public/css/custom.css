@@ -926,7 +926,7 @@ a:hover {
 
 .lightslide-box {
 	background-color: rgba(0, 0, 0, 0.7);
-	padding: 2.5em 3em 0.5em 3em;
+	/* padding: 2.5em 3em 0.5em 3em; */
   color: #D1D1D1;
 }
 
