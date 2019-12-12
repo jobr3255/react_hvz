@@ -18,9 +18,9 @@ export default class WeeklongLink extends Component {
     }
     return (
       <div className='white'>
-        <h5 className='title-link' style={{margin: 0}}><a href={'weeklong/' + weeklong.id}>{weeklong.title}</a></h5>
+        <h5 className='title-link' style={{margin: 0}}><a href={'/weeklong/' + weeklong.id}>{weeklong.title}</a></h5>
         <p><FormattedDate type="weeklong" startDate={weeklong.start_date} endDate={weeklong.end_date} /> |
-        <a href={'weeklong/' + weeklong.id + "/stats"}> stats</a></p>
+        <a href={'/weeklong/' + weeklong.id + "/stats"}> stats</a></p>
       </div>
     );
   }

@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 
-// import FormattedDate from '../assets/js/dataFormat.js';
-// import Lockin from '../components/events/Lockin.js';
+import ResponseError from '../components/errors/ResponseError.js';
+import FormattedDate from '../components/format/FormattedDate.js';
+// import FormattedDetails from '../components/format/FormattedDetails.js';
 
 export default class Weeklong extends Component {
 
@@ -42,8 +43,26 @@ export default class Weeklong extends Component {
   }
 
   render() {
+    var weeklong = this.state.weeklong;
+    let weeklongContent = null;
+    if(this.state.status !== null){
+      if(this.state.status === 200){
+        weeklongContent = (
+          <div className='white'>
+            <h5 className='title-link' style={{margin: 0}}><a href={'/weeklong/' + weeklong.id}>{weeklong.title}</a></h5>
+            <p><FormattedDate type="weeklong" startDate={weeklong.start_date} endDate={weeklong.end_date} /> |
+            <a href={'/weeklong/' + weeklong.id + "/stats"}> stats</a></p>
+          </div>
+        );
+      }else{
+        weeklongContent = <ResponseError status={this.state.status} message={this.state.error.message} />;
+      }
+    }
     return (
-      <div className="lightslide">
+      <div className="container">
+        <div className="content lightslide-box">
+          {weeklongContent}
+        </div>
       </div>
     );
   }

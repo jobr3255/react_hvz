@@ -65,10 +65,10 @@ export default class Events extends Component {
 							Need a map of the engineering center?
 							<br/>
 							<a href='/images/ec-maps/basement.png' target='_blank'>Basement</a> |
-							<a href='/images/ec-maps/first-floor.png' target='_blank'>1st floor</a> |
-							<a href='/images/ec-maps/second-floor.png' target='_blank'>2nd floor</a> |
-							<a href='/images/ec-maps/printable.pdf' target='_blank'>Full map</a> |
-							<a href='/images/ec-maps/printable-single-sheet.pdf' target='_blank'>Full map (single page)</a>
+							<a href='/images/ec-maps/first-floor.png' target='_blank'> 1st floor</a> |
+							<a href='/images/ec-maps/second-floor.png' target='_blank'> 2nd floor</a> |
+							<a href='/images/ec-maps/printable.pdf' target='_blank'> Full map</a> |
+							<a href='/images/ec-maps/printable-single-sheet.pdf' target='_blank'> Full map (single page)</a>
 						</div>
 						<hr/>
             {lockins}
