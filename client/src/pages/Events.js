@@ -1,9 +1,10 @@
 import React, {Component} from "react";
 
-import FormattedDate from '../assets/js/dataFormat.js';
 import LockinLink from '../components/events/LockinLink.js';
+import WeeklongLink from '../components/events/WeeklongLink.js';
 
 export default class Events extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -31,16 +32,8 @@ export default class Events extends Component {
     const weeklongs = []
     const lockins = []
     var event;
-    var element;
     for (event of this.state.weeklongs) {
-      element = (
-        <div key={event["id"]} className='white'>
-          <h5 className='title-link' style={{margin: 0}}><a href={'weeklong/info.php?id=' + event["id"]}>{event["title"]}</a></h5>
-          <p>{FormattedDate.formatDate(event["start_date"], event["end_date"])} |
-          <a href={'weeklong/info.php?id=' + event["id"]} > mission details</a> |
-          <a href={'weeklong/stats.php?id=' + event["id"]}> stats</a></p>
-        </div> );
-      weeklongs.push(element);
+      weeklongs.push(<WeeklongLink key={event["id"]} eventData={event} />);
     }
 
     for(event of this.state.lockins){

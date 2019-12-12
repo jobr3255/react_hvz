@@ -12,7 +12,7 @@ export default class Home extends Component {
           <h1 className="section-heading">Humans
           <span className="white"> versus </span>Zombies</h1>
           <h2 className="grey subheader">University of Colorado <strong className="deeporange">Boulder</strong></h2>
-          <img src="/images/skull.png" class="u-max-full-width" alt="Skull"/>
+          <img src="/images/skull.png" className="u-max-full-width" alt="Skull"/>
         </div>
         <div className="six columns lightslide-box content">
           <h5>
