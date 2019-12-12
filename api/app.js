@@ -1,12 +1,14 @@
 var createError = require('http-errors');
 var express = require('express');
+var bodyParser = require("body-parser");
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require("cors");
 
-var indexRouter = require('./routes/index');
-var eventsRouter = require('./routes/events');
+var eventRouter = require('./routes/events');
+var accountRouter = require('./routes/account');
+
 var usersRouter = require('./routes/users');
 var testAPIRouter = require("./routes/testAPI");
 
@@ -24,8 +26,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/api/events', eventsRouter);
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.use('/api/event', eventRouter);
+app.use("/", accountRouter);
 app.use('/users', usersRouter);
 app.use("/testAPI", testAPIRouter);
 
