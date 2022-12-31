@@ -8,12 +8,12 @@
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "0.9.5"
+    "react-scripts": "5.0.1"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.6.3",
     "npm-watch": "^0.6.0",
-    "react-hot-loader": "^4.12.15"
+    "react-hot-loader": "^4.13.1"
   },
   "scripts": {
     "start": "react-scripts start",
